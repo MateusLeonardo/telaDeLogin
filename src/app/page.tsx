@@ -1,3 +1,4 @@
+import { LoginCreateWithSocials } from "@/components/LoginRedes";
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 
@@ -21,16 +22,9 @@ export default function Home() {
             Create Account
           </h1>
           <div className="flex gap-5 text-2xl mt-4 text-gray-500">
-            <div className="p-3 border border-gray-500 rounded-full">
-              <FaFacebook />
-            </div>
-            <div className="p-3 border border-gray-500 rounded-full">
-              {" "}
-              <FaGoogle />
-            </div>
-            <div className="p-3 border border-gray-500 rounded-full">
-              <FaLinkedinIn />
-            </div>
+            <LoginCreateWithSocials children={<FaFacebook />} />
+            <LoginCreateWithSocials children={<FaGoogle />} />
+            <LoginCreateWithSocials children={<FaLinkedinIn />} />
           </div>
           <p className="text-gray-400 text-xl">
             or use your email from registration:
